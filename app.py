@@ -1660,7 +1660,7 @@ if st.session_state.authentication_status:
                     client, current_api_key = get_client_with_retry()
                     logger.info(f"Processing {filename} - Attempt {attempt + 1}")
                     response = client.models.generate_content(
-                        model="gemini-2.5-flash",
+                        model="gemini-3.1-flash-lite",
                         contents=[types.Part.from_bytes(data=file_content, mime_type="application/pdf"), prompt],
                         config={
                             'system_instruction': "شما تحلیلگر مالی هستید.",
